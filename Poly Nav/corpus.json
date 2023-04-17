@@ -1,0 +1,32 @@
+{
+    "buildings": [
+        {
+            "abreviation": "БС",
+            "address": "ул. Большая Семеновская 38",
+            "floors": [
+                {
+                    "id": 1,
+                    "imgUrl": "floor-1"
+                },
+                {
+                    "id": 2,
+                    "imgUrl": "floor-2"
+                }
+            ]
+        },
+        {
+            "abreviation": "ПК",
+            "address": "ул. Павла Коччагина 22",
+            "floors": [
+                {
+                    "id": 1,
+                    "imgUrl": "floor-1"
+                },
+                {
+                    "id": 2,
+                    "imgUrl": "floor-2"
+                }
+            ]
+        }
+    ]
+}

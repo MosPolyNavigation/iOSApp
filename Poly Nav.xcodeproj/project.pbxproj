@@ -11,6 +11,13 @@
 		27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */; };
 		27B46A6E29EC3B5E00EDC6A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A6D29EC3B5E00EDC6A0 /* Assets.xcassets */; };
 		27B46A7129EC3B5E00EDC6A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */; };
+		27B46A7829ECC08F00EDC6A0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7729ECC08F00EDC6A0 /* MapView.swift */; };
+		27B46A7A29ECCFD300EDC6A0 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7929ECCFD300EDC6A0 /* Floor.swift */; };
+		27B46A7C29ECD08300EDC6A0 /* corpus.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A7B29ECD08300EDC6A0 /* corpus.json */; };
+		27B46A7E29ECD3E000EDC6A0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */; };
+		27B46A8029ECD7BF00EDC6A0 /* BuildingRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7F29ECD7BF00EDC6A0 /* BuildingRow.swift */; };
+		27B46A8329ECE68800EDC6A0 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8229ECE68800EDC6A0 /* Macaw */; };
+		27B46A8629ECE8E400EDC6A0 /* SVGView in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8529ECE8E400EDC6A0 /* SVGView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +26,11 @@
 		27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27B46A6D29EC3B5E00EDC6A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		27B46A7729ECC08F00EDC6A0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		27B46A7929ECCFD300EDC6A0 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		27B46A7B29ECD08300EDC6A0 /* corpus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = corpus.json; sourceTree = "<group>"; };
+		27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		27B46A7F29ECD7BF00EDC6A0 /* BuildingRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B46A8629ECE8E400EDC6A0 /* SVGView in Frameworks */,
+				27B46A8329ECE68800EDC6A0 /* Macaw in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +69,11 @@
 				27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */,
 				27B46A6D29EC3B5E00EDC6A0 /* Assets.xcassets */,
 				27B46A6F29EC3B5E00EDC6A0 /* Preview Content */,
+				27B46A7729ECC08F00EDC6A0 /* MapView.swift */,
+				27B46A7929ECCFD300EDC6A0 /* Floor.swift */,
+				27B46A7B29ECD08300EDC6A0 /* corpus.json */,
+				27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */,
+				27B46A7F29ECD7BF00EDC6A0 /* BuildingRow.swift */,
 			);
 			path = "Poly Nav";
 			sourceTree = "<group>";
@@ -83,6 +102,10 @@
 			dependencies = (
 			);
 			name = "Poly Nav";
+			packageProductDependencies = (
+				27B46A8229ECE68800EDC6A0 /* Macaw */,
+				27B46A8529ECE8E400EDC6A0 /* SVGView */,
+			);
 			productName = "Poly Nav";
 			productReference = 27B46A6629EC3B5D00EDC6A0 /* Poly Nav.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +134,10 @@
 				Base,
 			);
 			mainGroup = 27B46A5D29EC3B5D00EDC6A0;
+			packageReferences = (
+				27B46A8129ECE68800EDC6A0 /* XCRemoteSwiftPackageReference "Macaw" */,
+				27B46A8429ECE8E400EDC6A0 /* XCRemoteSwiftPackageReference "SVGView" */,
+			);
 			productRefGroup = 27B46A6729EC3B5D00EDC6A0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B46A7129EC3B5E00EDC6A0 /* Preview Assets.xcassets in Resources */,
+				27B46A7C29ECD08300EDC6A0 /* corpus.json in Resources */,
 				27B46A6E29EC3B5E00EDC6A0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,7 +165,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B46A7E29ECD3E000EDC6A0 /* MainViewModel.swift in Sources */,
+				27B46A7A29ECCFD300EDC6A0 /* Floor.swift in Sources */,
+				27B46A8029ECD7BF00EDC6A0 /* BuildingRow.swift in Sources */,
 				27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */,
+				27B46A7829ECC08F00EDC6A0 /* MapView.swift in Sources */,
 				27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +371,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		27B46A8129ECE68800EDC6A0 /* XCRemoteSwiftPackageReference "Macaw" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/Macaw";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.9;
+			};
+		};
+		27B46A8429ECE8E400EDC6A0 /* XCRemoteSwiftPackageReference "SVGView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/SVGView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		27B46A8229ECE68800EDC6A0 /* Macaw */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27B46A8129ECE68800EDC6A0 /* XCRemoteSwiftPackageReference "Macaw" */;
+			productName = Macaw;
+		};
+		27B46A8529ECE8E400EDC6A0 /* SVGView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 27B46A8429ECE8E400EDC6A0 /* XCRemoteSwiftPackageReference "SVGView" */;
+			productName = SVGView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27B46A5E29EC3B5D00EDC6A0 /* Project object */;
 }
