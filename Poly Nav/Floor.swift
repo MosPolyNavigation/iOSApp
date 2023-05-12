@@ -12,8 +12,11 @@ import SVGView
 struct Floor: Identifiable, Decodable {
     var imgUrl: String
     var id: Int
-    var image: Image {
-        Image(imgUrl)
+    var image: SVGView {
+        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/pk"){
+            return SVGView(contentsOf: url)
+        }
+        return SVGView(string: "")
     }
     
 

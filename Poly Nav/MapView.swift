@@ -30,8 +30,7 @@ struct MapView: View {
                 HStack{
                     if let floor = building.floors.first(where: { $0.id == currentFloorId }){
                         floor.image
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
+
                     }else{
                         Text("Error")
                     }

@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-
+import SVGView
 struct BuildingButton: ButtonStyle{
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -26,6 +26,7 @@ struct ContentView: View {
     @State private var selectedTab = "Корпуса"
 
     var body: some View {
+       
         TabView(selection: $selectedTab){
             List{
                 ForEach(viewModel.buildings){ building in
@@ -41,17 +42,17 @@ struct ContentView: View {
                     Text("Корпуса")
                 }
             .tag("Buildings")
-            
-            
+
+
             MapView(building: selectedBuilding)
             .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")
                 }
             .tag("Routes")
-            
-            
-            
+
+
+
             Text("О Нас")
                 .tabItem {
                     Image(systemName: "info.circle.fill")
