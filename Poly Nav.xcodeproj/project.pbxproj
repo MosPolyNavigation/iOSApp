@@ -29,9 +29,10 @@
 		27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27B46A7729ECC08F00EDC6A0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		27B46A7929ECCFD300EDC6A0 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
+		27B46A7929ECCFD300EDC6A0 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Floor.swift; path = "Poly Nav/Models/Floor.swift"; sourceTree = SOURCE_ROOT; };
 		27B46A7B29ECD08300EDC6A0 /* corpus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = corpus.json; sourceTree = "<group>"; };
 		27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		27C0DA562A12B6530060F4DC /* Poly-Nav-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Poly-Nav-Info.plist"; sourceTree = SOURCE_ROOT; };
 		27CF82552A0E50210099C302 /* buildings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -104,6 +105,7 @@
 		27B46A6829EC3B5D00EDC6A0 /* Poly Nav */ = {
 			isa = PBXGroup;
 			children = (
+				27C0DA562A12B6530060F4DC /* Poly-Nav-Info.plist */,
 				27B46A7B29ECD08300EDC6A0 /* corpus.json */,
 				113AF9F02A12900E009A9D48 /* Resources */,
 				113AF9EF2A128FD1009A9D48 /* Views */,
@@ -334,10 +336,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Poly\\ Nav/Resources Poly\\ Nav/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poly-Nav-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -363,10 +366,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Resources/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "Poly\\ Nav/Resources Poly\\ Nav/Resources/Preview\\ Content";
 				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Poly-Nav-Info.plist";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

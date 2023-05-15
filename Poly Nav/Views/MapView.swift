@@ -33,7 +33,7 @@ struct MapView: View {
     var body: some View {
         VStack {
             if let campus = campus {
-                var building = campus.buildings[selectedBuilding - 1]
+                let building = campus.buildings[selectedBuilding - 1]
                 ZStack {
                     HStack {
                         if isGenPlan {

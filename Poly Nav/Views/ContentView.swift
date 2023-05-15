@@ -44,6 +44,7 @@ struct ContentView: View {
                         .stroke(.gray, lineWidth: 0.5)
                 })
                 .padding(.bottom, 25)
+                .padding()
 
                 List {
                     ForEach(viewModel.campuses) { campus in
@@ -61,6 +62,7 @@ struct ContentView: View {
                 }
                 .listStyle(.insetGrouped)
             }
+            
             .tabItem {
                 Image(systemName: "rectangle.grid.2x2.fill")
                 Text("Корпуса")
