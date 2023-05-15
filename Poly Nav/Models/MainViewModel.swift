@@ -15,7 +15,7 @@ class ViewModel: ObservableObject {
     @Published var buildings: [Building] = []
 
     func loadBuildings() {
-        if let url = Bundle.main.url(forResource: "corpus.json", withExtension: nil) {
+        if let url = Bundle.main.url(forResource: "Models/corpus.json", withExtension: nil) {
             do {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
