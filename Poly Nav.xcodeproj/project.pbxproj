@@ -48,6 +48,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		113AF9EF2A128FD1009A9D48 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */,
+				27B46A7729ECC08F00EDC6A0 /* MapView.swift */,
+				27B46A7F29ECD7BF00EDC6A0 /* BuildingRow.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		113AF9F02A12900E009A9D48 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				111E274C2A118D3C00BFE9BC /* Assets.xcassets */,
+				27B46A6F29EC3B5E00EDC6A0 /* Preview Content */,
+				27CF82552A0E50210099C302 /* buildings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		113AF9F12A1290C6009A9D48 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		113AF9F22A1290D9009A9D48 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				27B46A7929ECCFD300EDC6A0 /* Floor.swift */,
+				27B46A7B29ECD08300EDC6A0 /* corpus.json */,
+				27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		27B46A5D29EC3B5D00EDC6A0 = {
 			isa = PBXGroup;
 			children = (
@@ -67,16 +105,10 @@
 		27B46A6829EC3B5D00EDC6A0 /* Poly Nav */ = {
 			isa = PBXGroup;
 			children = (
-				27CF82552A0E50210099C302 /* buildings */,
-				27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */,
-				27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */,
-				111E274C2A118D3C00BFE9BC /* Assets.xcassets */,
-				27B46A6F29EC3B5E00EDC6A0 /* Preview Content */,
-				27B46A7729ECC08F00EDC6A0 /* MapView.swift */,
-				27B46A7929ECCFD300EDC6A0 /* Floor.swift */,
-				27B46A7B29ECD08300EDC6A0 /* corpus.json */,
-				27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */,
-				27B46A7F29ECD7BF00EDC6A0 /* BuildingRow.swift */,
+				113AF9F02A12900E009A9D48 /* Resources */,
+				113AF9EF2A128FD1009A9D48 /* Views */,
+				113AF9F12A1290C6009A9D48 /* App */,
+				113AF9F22A1290D9009A9D48 /* Models */,
 			);
 			path = "Poly Nav";
 			sourceTree = "<group>";
@@ -302,7 +334,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -331,7 +363,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Resources/Preview Content\"";
 				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;

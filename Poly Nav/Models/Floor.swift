@@ -13,7 +13,7 @@ struct Floor: Identifiable, Decodable {
     var imgUrl: String
     var id: Int
     var image: SVGView {
-        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/avt") {
+        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "Resources/buildings/avt") {
             return SVGView(contentsOf: url)
         }
         return SVGView(string: "")
@@ -27,7 +27,7 @@ struct Campus:Decodable,Identifiable {
     var buildings: [Building]
     
     var genPlanSvg: SVGView {
-        if let url = Bundle.main.url(forResource: genPlanUrl, withExtension: "svg", subdirectory: "buildings/avt"){
+        if let url = Bundle.main.url(forResource: genPlanUrl, withExtension: "svg", subdirectory: "Resources/buildings/avt"){
             return SVGView(contentsOf: url)
         }
         return SVGView(string: "")
