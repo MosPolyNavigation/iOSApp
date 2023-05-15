@@ -19,7 +19,7 @@ struct FloorButton: ButtonStyle {
 }
 
 struct MapView: View {
-    @State var selectedBuilding: Int = 1
+    @Binding var selectedBuilding: Int
     @State var campus: Campus?
 
     @Binding var isGenPlan: Bool
@@ -33,62 +33,64 @@ struct MapView: View {
     var body: some View {
         VStack {
             if let campus = campus {
-                let building = campus.buildings[selectedBuilding - 1]
-                ZStack {
-                    HStack {
-                        if isGenPlan {
-                            campus.genPlanSvg
-                                .aspectRatio(1.3, contentMode: .fit)
-                        } else {
-                            if let floor = building.floors.first(where: { $0.id == currentFloorId }) {
-                                floor.image
-
+                if let building = campus.buildings.first(where: {$0.id == selectedBuilding}) {
+                    ZStack {
+                        HStack {
+                            if isGenPlan {
+                                campus.genPlanSvg
+                                    .aspectRatio(1.3, contentMode: .fit)
                             } else {
-                                Text("Error")
+                                if let floor = building.floors.first(where: { $0.id == currentFloorId }) {
+                                    floor.image
+
+                                } else {
+                                    Text("Error")
+                                }
                             }
                         }
-                    }
-                    VStack {
-                        HStack {
-                            Image(systemName: "magnifyingglass")
-                            TextField("Search", text: $searchText)
-                                .textFieldStyle(.plain)
-                        }
-                        .padding(.horizontal, 10)
-                        .frame(height: 48)
-                        .background(Color.black)
-                        .overlay(content: {
-                            RoundedRectangle(cornerRadius: 15)
-                                .stroke(.gray, lineWidth: 0.5)
-                        })
-                        .padding(.bottom, 25)
+                        VStack {
+                            HStack {
+                                Image(systemName: "magnifyingglass")
+                                TextField("Search", text: $searchText)
+                                    .textFieldStyle(.plain)
+                            }
+                            .padding(.horizontal, 10)
+                            .frame(height: 48)
+                            .background(Color.black)
+                            .overlay(content: {
+                                RoundedRectangle(cornerRadius: 15)
+                                    .stroke(.gray, lineWidth: 0.5)
+                            })
+                            .padding(.bottom, 25)
 
-                        HStack {
-                            VStack {
-                                if !isGenPlan {
-                                    ForEach(building.floors) { floor in
-                                        if currentFloorId == floor.id {
-                                            Text("\(floor.id)")
-                                                .frame(width: 40, height: 40, alignment: .center)
-                                                .background(Color.accentColor)
-                                                .foregroundColor(.white)
-                                                .cornerRadius(6)
+                            HStack {
+                                VStack {
+                                    if !isGenPlan {
+                                        ForEach(building.floors) { floor in
+                                            if currentFloorId == floor.id {
+                                                Text("\(floor.id)")
+                                                    .frame(width: 40, height: 40, alignment: .center)
+                                                    .background(Color.accentColor)
+                                                    .foregroundColor(.white)
+                                                    .cornerRadius(6)
 
-                                        } else {
-                                            Button("\(floor.id)") {
-                                                currentFloorId = floor.id
+                                            } else {
+                                                Button("\(floor.id)") {
+                                                    currentFloorId = floor.id
+                                                }
+                                                .buttonStyle(FloorButton())
                                             }
-                                            .buttonStyle(FloorButton())
                                         }
                                     }
                                 }
-                            }
 
+                                Spacer()
+                            }
                             Spacer()
-                        }
-                        Spacer()
-                    }.padding()
+                        }.padding()
+                    }
                 }
+                
             } else {
                 Text("Loading")
             }

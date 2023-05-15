@@ -69,7 +69,7 @@ struct ContentView: View {
             }
             .tag("Buildings")
 
-            MapView(selectedBuilding: selectedBuilding, campus: selectedCampus, isGenPlan: $isGenPlan)
+            MapView(selectedBuilding: $selectedBuilding, campus: selectedCampus, isGenPlan: $isGenPlan)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")
