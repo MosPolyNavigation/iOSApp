@@ -1,8 +1,13 @@
 {
     "buildings": [
         {
-            "abreviation": "ПК",
-            "address": "ул. Павла Коччагина 22",
+            "abbreviation": "А, Б, В, Н, НД",
+            "address": "ул. Большая Семёновская, д. 38",
+            "floors": []
+        },
+        {
+            "abbreviation": "АВ",
+            "address": "ул. Автозаводская, д. 16",
             "floors": [
                 {
                     "id": 1,
@@ -11,8 +16,35 @@
                 {
                     "id": 2,
                     "imgUrl": "k4-f2"
-                }
+                },
+                {
+                    "id": 3,
+                    "imgUrl": "k4-f5"
+                },
+                {
+                    "id": 4,
+                    "imgUrl": "k1-f3"
+                },
+                {
+                    "id": 5,
+                    "imgUrl": "k5-f9"
+                },
             ]
-        }
+        },
+        {
+            "abbreviation": "ПК",
+            "address": "ул. Павла Корчагина, д. 22",
+            "floors": []
+        },
+        {
+            "abbreviation": "ПР",
+            "address": "ул. Прянишникова, д. 2А",
+            "floors": []
+        },
+        {
+            "abbreviation": "М",
+            "address": "ул. Михалковская, д. 7",
+            "floors": []
+        },
     ]
 }

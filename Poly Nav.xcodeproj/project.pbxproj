@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111E274D2A118D3C00BFE9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111E274C2A118D3C00BFE9BC /* Assets.xcassets */; };
 		27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */; };
 		27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */; };
-		27B46A6E29EC3B5E00EDC6A0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A6D29EC3B5E00EDC6A0 /* Assets.xcassets */; };
 		27B46A7129EC3B5E00EDC6A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */; };
 		27B46A7829ECC08F00EDC6A0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7729ECC08F00EDC6A0 /* MapView.swift */; };
 		27B46A7A29ECCFD300EDC6A0 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7929ECCFD300EDC6A0 /* Floor.swift */; };
@@ -22,10 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111E274C2A118D3C00BFE9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27B46A6629EC3B5D00EDC6A0 /* Poly Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poly Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poly_NavApp.swift; sourceTree = "<group>"; };
 		27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		27B46A6D29EC3B5E00EDC6A0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/mike/Documents/Poly Nav/Poly Nav/Assets.xcassets"; sourceTree = "<absolute>"; };
 		27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		27B46A7729ECC08F00EDC6A0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		27B46A7929ECCFD300EDC6A0 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Floor.swift; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 				27CF82552A0E50210099C302 /* buildings */,
 				27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */,
 				27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */,
-				27B46A6D29EC3B5E00EDC6A0 /* Assets.xcassets */,
+				111E274C2A118D3C00BFE9BC /* Assets.xcassets */,
 				27B46A6F29EC3B5E00EDC6A0 /* Preview Content */,
 				27B46A7729ECC08F00EDC6A0 /* MapView.swift */,
 				27B46A7929ECCFD300EDC6A0 /* Floor.swift */,
@@ -158,7 +158,7 @@
 				27B46A7129EC3B5E00EDC6A0 /* Preview Assets.xcassets in Resources */,
 				27B46A7C29ECD08300EDC6A0 /* corpus.json in Resources */,
 				27CF82562A0E50210099C302 /* buildings in Resources */,
-				27B46A6E29EC3B5E00EDC6A0 /* Assets.xcassets in Resources */,
+				111E274D2A118D3C00BFE9BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,14 +303,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Preview Content\"";
-				DEVELOPMENT_TEAM = 9PPXP3S8Q7;
+				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,14 +332,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Poly Nav/Preview Content\"";
-				DEVELOPMENT_TEAM = 9PPXP3S8Q7;
+				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.navigation";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SVGView
+
 struct BuildingButton: ButtonStyle{
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
@@ -18,21 +19,21 @@ struct BuildingButton: ButtonStyle{
     }
 }
 
-
 struct ContentView: View {
-    
     @EnvironmentObject var viewModel: ViewModel
+
     @State private var selectedBuilding: Building?
     @State private var selectedTab = "Корпуса"
 
     var body: some View {
-       
         TabView(selection: $selectedTab){
             List{
                 ForEach(viewModel.buildings){ building in
-                    Text("\(building.address)").onTapGesture {
+                    Text("\(building.address) (\(building.abbreviation))").onTapGesture {
+                        print(building)
                         selectedBuilding = building
                         selectedTab = "Routes"
+                        print(building)
                     }
                 }
             }

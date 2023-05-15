@@ -13,7 +13,7 @@ struct Floor: Identifiable, Decodable {
     var imgUrl: String
     var id: Int
     var image: SVGView {
-        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/pk"){
+        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/avt"){
             return SVGView(contentsOf: url)
         }
         return SVGView(string: "")
@@ -24,8 +24,8 @@ struct Floor: Identifiable, Decodable {
 }
 
 struct Building: Decodable, Identifiable {
-    var abreviation: String
+    var abbreviation: String
     var address: String
     var floors: [Floor]
-    var id: String {abreviation}
+    var id: String {abbreviation}
 }

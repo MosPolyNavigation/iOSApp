@@ -8,7 +8,7 @@
 import SwiftUI
 import SVGView
 
-struct FloorButton: ButtonStyle{
+struct FloorButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(width: 40, height: 40, alignment: .center)
@@ -21,8 +21,13 @@ struct FloorButton: ButtonStyle{
 
 struct MapView: View {
     @State var building: Building?
+    
     @State private var currentFloorId: Int = 1
     @State private var searchText: String = ""
+    
+    @GestureState private var scale: CGFloat = 1.0
+    @State private var currentScale: CGFloat = 1.0
+    
     var body: some View {
         VStack {
             if let building = building {
@@ -30,8 +35,7 @@ struct MapView: View {
                 HStack{
                     if let floor = building.floors.first(where: { $0.id == currentFloorId }){
                         floor.image
-
-                    }else{
+                    } else {
                         Text("Error")
                     }
                     
