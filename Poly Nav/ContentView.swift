@@ -22,6 +22,7 @@ struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
 
     @State private var selectedBuilding: Building?
+    @State private var isGenPlan: Bool = false
     @State private var selectedTab = "Корпуса"
 
     @State private var searchText: String = ""
@@ -45,11 +46,22 @@ struct ContentView: View {
 
                 List {
                     ForEach(viewModel.buildings) { building in
-                        Text("\(building.address) (\(building.abbreviation))").onTapGesture {
-                            print(building)
-                            selectedBuilding = building
-                            selectedTab = "Routes"
-                            print(building)
+                       HStack{
+                   
+                           Text("\(building.address) (\(building.abbreviation))").onTapGesture {
+                                print(building)
+                                selectedBuilding = building
+                                selectedTab = "Routes"
+                                print(building)
+                           }  
+                         
+                           Spacer()
+                         
+                           Text("Общ. план").onTapGesture {
+                                print("plan")
+                                selectedBuilding = building
+                                selectedTab = "Routes"
+                           }
                         }
                     }
                 }
@@ -61,7 +73,7 @@ struct ContentView: View {
             }
             .tag("Buildings")
 
-            MapView(building: selectedBuilding)
+            MapView(building: selectedBuilding, isGenPlan: $isGenPlan)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")

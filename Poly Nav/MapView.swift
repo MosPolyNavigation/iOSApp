@@ -20,6 +20,7 @@ struct FloorButton: ButtonStyle {
 
 struct MapView: View {
     @State var building: Building?
+    @Binding var isGenPlan: Bool
 
     @State private var currentFloorId: Int = 1
     @State private var searchText: String = ""
@@ -32,13 +33,18 @@ struct MapView: View {
             if let building = building {
                 ZStack {
                     HStack {
-                        if let floor = building.floors.first(where: { $0.id == currentFloorId }) {
+                        if isGenPlan {
+                        building.genPlanSvg
+                            .aspectRatio(1.3, contentMode: .fit)
+                    } else {
+                        if let floor = building.floors.first(where: { $0.id == currentFloorId }){
                             floor.image
-                        } else {
+
+                        }else{
                             Text("Error")
                         }
                     }
-
+                    }
                     VStack {
                         HStack {
                             Image(systemName: "magnifyingglass")
@@ -54,23 +60,26 @@ struct MapView: View {
                         })
                         .padding(.bottom, 25)
 
+
                         HStack {
                             VStack {
-                                ForEach(building.floors) { floor in
-                                    if currentFloorId == floor.id {
-                                        Text("\(floor.id)")
-                                            .frame(width: 40, height: 40, alignment: .center)
-                                            .background(Color.accentColor)
-                                            .foregroundColor(.white)
-                                            .cornerRadius(6)
+                              if !isGenPlan {
+                                  ForEach(building.floors) { floor in
+                                      if currentFloorId == floor.id {
+                                          Text("\(floor.id)")
+                                              .frame(width: 40, height: 40, alignment: .center)
+                                              .background(Color.accentColor)
+                                              .foregroundColor(.white)
+                                              .cornerRadius(6)
 
-                                    } else {
-                                        Button("\(floor.id)") {
-                                            currentFloorId = floor.id
-                                        }
-                                        .buttonStyle(FloorButton())
-                                    }
-                                }
+                                      } else {
+                                          Button("\(floor.id)") {
+                                              currentFloorId = floor.id
+                                          }
+                                          .buttonStyle(FloorButton())
+                                      }
+                                  }
+                              }
                             }
 
                             Spacer()
@@ -81,6 +90,9 @@ struct MapView: View {
             } else {
                 Text("Loading")
             }
+        }
+        .onAppear{
+            print(isGenPlan)
         }
     }
 }

@@ -1,13 +1,17 @@
 {
     "buildings": [
         {
+
             "abbreviation": "А, Б, В, Н, НД",
+            "genPlanUrl": "k4-f2",
             "address": "ул. Большая Семёновская, д. 38",
             "floors": []
         },
         {
             "abbreviation": "АВ",
             "address": "ул. Автозаводская, д. 16",
+            "genPlanUrl": "k4-f2",
+
             "floors": [
                 {
                     "id": 1,
@@ -33,16 +37,20 @@
         },
         {
             "abbreviation": "ПК",
+            "genPlanUrl": "k4-f2",
             "address": "ул. Павла Корчагина, д. 22",
             "floors": []
         },
         {
             "abbreviation": "ПР",
+            "genPlanUrl": "k4-f2",
             "address": "ул. Прянишникова, д. 2А",
             "floors": []
         },
         {
             "abbreviation": "М",
+            "genPlanUrl": "k4-f2",
+
             "address": "ул. Михалковская, д. 7",
             "floors": []
         },

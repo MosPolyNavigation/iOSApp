@@ -23,6 +23,14 @@ struct Floor: Identifiable, Decodable {
 struct Building: Decodable, Identifiable {
     var abbreviation: String
     var address: String
+    var genPlanUrl: String
     var floors: [Floor]
+    var genPlanSvg: SVGView {
+        if let url = Bundle.main.url(forResource: genPlanUrl, withExtension: "svg", subdirectory: "buildings/avt"){
+            return SVGView(contentsOf: url)
+        }
+        return SVGView(string: "")
+    }
+    }
     var id: String { abbreviation }
 }
