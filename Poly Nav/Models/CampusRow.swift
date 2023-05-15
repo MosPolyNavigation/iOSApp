@@ -16,7 +16,7 @@ struct CampusRow: View {
 
     var body: some View {
         VStack {
-            Text("\(campus.address) (\(campus.abbreviation))")
+            Text("\(campus.address)\(campus.address == "ул. Большая Семёновская, д. 38" ? "\n" : " ")(\(campus.abbreviation))")
                 .padding(.top, 5)
 
             VStack {

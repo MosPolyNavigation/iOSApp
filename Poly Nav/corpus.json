@@ -1,68 +1,21 @@
 {
-    "buildings": [
-        {
-            
-            "abbreviation": "А, Б, В, Н, НД",
-            "genPlanUrl": "k4-f2",
-            "address": "ул. Большая Семёновская, д. 38",
-            "floors": []
-        },
-        {
-            "abbreviation": "АВ",
-            "address": "ул. Автозаводская, д. 16",
-            "genPlanUrl": "k4-f2",
-            
-            "floors": [
-                {
-                    "id": 1,
-                    "imgUrl": "k4-f1"
-                },
-                {
-                    "id": 2,
-                    "imgUrl": "k4-f2"
-                },
-                {
-                    "id": 3,
-                    "imgUrl": "k4-f5"
-                },
-                {
-                    "id": 4,
-                    "imgUrl": "k1-f3"
-                },
-                {
-                    "id": 5,
-                    "imgUrl": "k5-f9"
-                },
-            ]
-        },
-        {
-            "abbreviation": "ПК",
-            "genPlanUrl": "k4-f2",
-            "address": "ул. Павла Корчагина, д. 22",
-            "floors": []
-        },
-        {
-            "abbreviation": "ПР",
-            "genPlanUrl": "k4-f2",
-            "address": "ул. Прянишникова, д. 2А",
-            "floors": []
-        },
-        {
-            "abbreviation": "М",
-            "genPlanUrl": "k4-f2",
-            
-            "address": "ул. Михалковская, д. 7",
-            "floors": []
-        },
-    ],
     "campuses": [
         {
-            "abbreviation": "ПК",
-            "genPlanUrl": "k4-f2",
-            "address": "ул. Павла Корчагина, д. 22",
+            "abbreviation": "АВ",
+            "genPlanUrl": "general",
+            "address": "ул. Автозаводская, д. 16",
             "buildings": [
                 {
                     "id":1,
+                    "floors": [
+                        {
+                            "id": 1,
+                            "imgUrl": "k1-f3"
+                        }
+                    ]
+                },
+                {
+                    "id":2,
                     "floors": [
                         {
                             "id": 1,
@@ -72,26 +25,47 @@
                             "id": 2,
                             "imgUrl": "k4-f2"
                         },
+                        {
+                            "id": 3,
+                            "imgUrl": "k4-f5"
+                        },
                     ]
                 },
                 {
-                    "id":2,
+                    "id":3,
                     "floors": [
                         {
                             "id": 1,
-                            "imgUrl": "k4-f5"
-                        },
-                        {
-                            "id": 2,
-                            "imgUrl": "k4-f3"
-                        },
-                        {
-                            "id": 3,
-                            "imgUrl": "k4-f9"
-                        },
+                            "imgUrl": "k5-f9"
+                        }
                     ]
                 }
             ]
+        },
+        {
+            
+            "abbreviation": "А, Б, В, Н, НД",
+            "genPlanUrl": "",
+            "address": "ул. Большая Семёновская, д. 38",
+            "buildings": []
+        },
+        {
+            "abbreviation": "ПК",
+            "genPlanUrl": "",
+            "address": "ул. Павла Корчагина, д. 22",
+            "buildings": []
+        },
+        {
+            "abbreviation": "ПР",
+            "genPlanUrl": "",
+            "address": "ул. Прянишникова, д. 2А",
+            "buildings": []
+        },
+        {
+            "abbreviation": "М",
+            "genPlanUrl": "",
+            "address": "ул. Михалковская, д. 7",
+            "buildings": []
         }
     ]
 }
