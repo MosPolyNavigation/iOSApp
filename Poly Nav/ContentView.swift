@@ -20,13 +20,13 @@ struct BuildingButton: ButtonStyle {
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
-
+    
     @State private var selectedBuilding: Building?
     @State private var isGenPlan: Bool = false
     @State private var selectedTab = "Корпуса"
-
+    
     @State private var searchText: String = ""
-
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             VStack {
@@ -43,25 +43,25 @@ struct ContentView: View {
                         .stroke(.gray, lineWidth: 0.5)
                 })
                 .padding(.bottom, 25)
-
+                
                 List {
                     ForEach(viewModel.buildings) { building in
-                       HStack{
-                   
-                           Text("\(building.address) (\(building.abbreviation))").onTapGesture {
+                        HStack{
+                            
+                            Text("\(building.address) (\(building.abbreviation))").onTapGesture {
                                 print(building)
                                 selectedBuilding = building
                                 selectedTab = "Routes"
                                 print(building)
-                           }  
-                         
-                           Spacer()
-                         
-                           Text("Общ. план").onTapGesture {
+                            }
+                            
+                            Spacer()
+                            
+                            Text("Общ. план").onTapGesture {
                                 print("plan")
                                 selectedBuilding = building
                                 selectedTab = "Routes"
-                           }
+                            }
                         }
                     }
                 }
@@ -72,14 +72,14 @@ struct ContentView: View {
                 Text("Корпуса")
             }
             .tag("Buildings")
-
+            
             MapView(building: selectedBuilding, isGenPlan: $isGenPlan)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")
                 }
                 .tag("Routes")
-
+            
             Text("О Нас")
                 .tabItem {
                     Image(systemName: "info.circle.fill")

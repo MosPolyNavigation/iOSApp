@@ -31,6 +31,5 @@ struct Building: Decodable, Identifiable {
         }
         return SVGView(string: "")
     }
-    }
     var id: String { abbreviation }
 }
