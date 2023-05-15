@@ -8,11 +8,11 @@
 import Foundation
 
 struct ResponseData: Decodable {
-    var buildings: [Building]
+    var campuses: [Campus]
 }
 
 class ViewModel: ObservableObject {
-    @Published var buildings: [Building] = []
+    @Published var campuses: [Campus] = []
 
     func loadBuildings() {
         if let url = Bundle.main.url(forResource: "corpus.json", withExtension: nil) {
@@ -20,7 +20,7 @@ class ViewModel: ObservableObject {
                 let data = try Data(contentsOf: url)
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(ResponseData.self, from: data)
-                buildings = jsonData.buildings
+                campuses = jsonData.campuses
             } catch {
                 print("error: \(error)")
             }

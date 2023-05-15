@@ -20,11 +20,12 @@ struct Floor: Identifiable, Decodable {
     }
 }
 
-struct Building: Decodable, Identifiable {
+struct Campus:Decodable,Identifiable {
     var abbreviation: String
     var address: String
     var genPlanUrl: String
-    var floors: [Floor]
+    var buildings: [Building]
+    
     var genPlanSvg: SVGView {
         if let url = Bundle.main.url(forResource: genPlanUrl, withExtension: "svg", subdirectory: "buildings/avt"){
             return SVGView(contentsOf: url)
@@ -32,4 +33,9 @@ struct Building: Decodable, Identifiable {
         return SVGView(string: "")
     }
     var id: String { abbreviation }
+}
+
+struct Building: Decodable, Identifiable {
+    var id: Int
+    var floors: [Floor]
 }

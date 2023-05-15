@@ -21,7 +21,8 @@ struct BuildingButton: ButtonStyle {
 struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
     
-    @State private var selectedBuilding: Building?
+    @State private var selectedBuilding: Int = 1
+    @State private var selectedCampus: Campus?
     @State private var isGenPlan: Bool = false
     @State private var selectedTab = "Корпуса"
     
@@ -45,24 +46,18 @@ struct ContentView: View {
                 .padding(.bottom, 25)
                 
                 List {
-                    ForEach(viewModel.buildings) { building in
-                        HStack{
+                    ForEach(viewModel.campuses) { campus in
+                        CampusRow(campus: campus, openGenPlan: {
                             
-                            Text("\(building.address) (\(building.abbreviation))").onTapGesture {
-                                print(building)
-                                selectedBuilding = building
-                                selectedTab = "Routes"
-                                print(building)
-                            }
-                            
-                            Spacer()
-                            
-                            Text("Общ. план").onTapGesture {
-                                print("plan")
-                                selectedBuilding = building
-                                selectedTab = "Routes"
-                            }
-                        }
+                            selectedTab = "Routes"
+                            isGenPlan = true
+                        }, openBuilding: {id in
+                            selectedCampus = campus
+                            selectedBuilding = id
+                            isGenPlan = false
+                            selectedTab = "Routes"
+
+                        })
                     }
                 }
                 .listStyle(.insetGrouped)
@@ -73,7 +68,7 @@ struct ContentView: View {
             }
             .tag("Buildings")
             
-            MapView(building: selectedBuilding, isGenPlan: $isGenPlan)
+            MapView(selectedBuilding: selectedBuilding, campus: selectedCampus, isGenPlan: $isGenPlan)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")
@@ -88,7 +83,7 @@ struct ContentView: View {
         }
         .onAppear {
             viewModel.loadBuildings()
-            selectedBuilding = viewModel.buildings.first!
+            selectedCampus = viewModel.campuses.first!
         }
     }
 }

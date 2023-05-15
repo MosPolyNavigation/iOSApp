@@ -19,7 +19,9 @@ struct FloorButton: ButtonStyle {
 }
 
 struct MapView: View {
-    @State var building: Building?
+    @State var selectedBuilding: Int = 1
+    @State var campus: Campus?
+    
     @Binding var isGenPlan: Bool
     
     @State private var currentFloorId: Int = 1
@@ -30,13 +32,15 @@ struct MapView: View {
     
     var body: some View {
         VStack {
-            if let building = building {
+            if let campus = campus {
+                var building = campus.buildings[selectedBuilding - 1]
                 ZStack {
                     HStack {
                         if isGenPlan {
-                            building.genPlanSvg
+                            campus.genPlanSvg
                                 .aspectRatio(1.3, contentMode: .fit)
                         } else {
+                            
                             if let floor = building.floors.first(where: { $0.id == currentFloorId }){
                                 floor.image
                                 
