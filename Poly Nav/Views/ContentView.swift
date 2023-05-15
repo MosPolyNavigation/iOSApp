@@ -20,14 +20,14 @@ struct BuildingButton: ButtonStyle {
 
 struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
-    
+
     @State private var selectedBuilding: Int = 1
     @State private var selectedCampus: Campus?
     @State private var isGenPlan: Bool = false
     @State private var selectedTab = "Корпуса"
-    
+
     @State private var searchText: String = ""
-    
+
     var body: some View {
         TabView(selection: $selectedTab) {
             VStack {
@@ -44,14 +44,13 @@ struct ContentView: View {
                         .stroke(.gray, lineWidth: 0.5)
                 })
                 .padding(.bottom, 25)
-                
+
                 List {
                     ForEach(viewModel.campuses) { campus in
                         CampusRow(campus: campus, openGenPlan: {
-                            
                             selectedTab = "Routes"
                             isGenPlan = true
-                        }, openBuilding: {id in
+                        }, openBuilding: { id in
                             selectedCampus = campus
                             selectedBuilding = id
                             isGenPlan = false
@@ -67,14 +66,14 @@ struct ContentView: View {
                 Text("Корпуса")
             }
             .tag("Buildings")
-            
+
             MapView(selectedBuilding: selectedBuilding, campus: selectedCampus, isGenPlan: $isGenPlan)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")
                 }
                 .tag("Routes")
-            
+
             Text("О Нас")
                 .tabItem {
                     Image(systemName: "info.circle.fill")

@@ -9,34 +9,31 @@ import SwiftUI
 
 struct CampusRow: View {
     var campus: Campus
-    var openGenPlan: ()-> Void
-    
+    var openGenPlan: () -> Void
+
     var openBuilding: (_ id: Int) -> Void
     @State private var isExpanded: Bool = false
-    
-    
+
     var body: some View {
         VStack {
             Text("\(campus.address) (\(campus.abbreviation))")
-                .padding(.top,5)
-            
-            
-            VStack{
+                .padding(.top, 5)
+
+            VStack {
                 if isExpanded {
                     Divider()
                     Text("Общий план")
-                        .padding(.vertical,  2)
+                        .padding(.vertical, 2)
                         .onTapGesture {
                             openGenPlan()
                             isExpanded = false
                         }
-                    ForEach(campus.buildings){ building in
+                    ForEach(campus.buildings) { building in
                         Divider()
                         Text("\(building.id) здание")
                             .onTapGesture {
                                 openBuilding(building.id)
                                 isExpanded = false
-                                
                             }
                     }
                 }
@@ -46,10 +43,7 @@ struct CampusRow: View {
         }
         .frame(alignment: .leading)
         .onTapGesture {
-            
             isExpanded.toggle()
-            
         }
-        
     }
 }
