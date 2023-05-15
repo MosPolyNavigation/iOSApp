@@ -6,26 +6,23 @@
 //
 
 import Foundation
-import SwiftUI
 import SVGView
+import SwiftUI
 
 struct Floor: Identifiable, Decodable {
     var imgUrl: String
     var id: Int
     var image: SVGView {
-        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/avt"){
+        if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/avt") {
             return SVGView(contentsOf: url)
         }
         return SVGView(string: "")
     }
-    
-
-    
 }
 
 struct Building: Decodable, Identifiable {
     var abbreviation: String
     var address: String
     var floors: [Floor]
-    var id: String {abbreviation}
+    var id: String { abbreviation }
 }
