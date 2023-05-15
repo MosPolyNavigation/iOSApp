@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "5F64B1EC-E9D5-4A11-871F-7A74CB025BF6"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DB306DC2-7017-4471-83F8-C2B16DA9CFBE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poly Nav/Floor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "image"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poly Nav/Floor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "image"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2 - d898c98d75d3581b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "268">
+               </Location>
+               <Location
+                  uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2 - d898c98d75d3581b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "504">
+               </Location>
+               <Location
+                  uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2 - d898c98d75d3581b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "576">
+               </Location>
+               <Location
+                  uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2 - d898c98d75d3581b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "272">
+               </Location>
+               <Location
+                  uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2 - d898c98d75d3581b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "232">
+               </Location>
+               <Location
+                  uuid = "11D0C9AF-29EE-4C87-8D5B-8E180699F7B2 - 426b0d4b66c53995"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SwiftUI.Image"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "88">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5729AA8-BA50-4491-BB8F-7FBD084BCAD3"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poly Nav/Floor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "image"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "F5729AA8-BA50-4491-BB8F-7FBD084BCAD3 - d898c98d75d35834"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "568">
+               </Location>
+               <Location
+                  uuid = "F5729AA8-BA50-4491-BB8F-7FBD084BCAD3 - d898c98d75d35834"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "632">
+               </Location>
+               <Location
+                  uuid = "F5729AA8-BA50-4491-BB8F-7FBD084BCAD3 - d898c98d75d35834"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Poly_Nav.Floor.image.getter : SVGView.SVGView"
+                  moduleName = "Poly Nav"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mike/Documents/Poly%20Nav/Poly%20Nav/Floor.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "696">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7A1E2846-A87F-49FF-8E59-6DC7500FECFD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poly Nav/Floor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "image"
+            landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CC9A0031-5FA5-4858-9D27-4EF567ED548F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Poly Nav/Floor.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "Building"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

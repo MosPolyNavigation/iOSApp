@@ -9,23 +9,21 @@ import SwiftUI
 
 struct BuildingRow: View {
     var building: Building
-    
-    
+
     var body: some View {
-        HStack{
+        HStack {
             Text(building.address)
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 10)
         .padding(.horizontal)
-        
 
         .cornerRadius(10)
     }
 }
 
-//struct BuildingRow_Previews: PreviewProvider {
+// struct BuildingRow_Previews: PreviewProvider {
 //    static var previews: some View {
 //        BuildingRow()
 //    }
-//}
+// }
