@@ -28,26 +28,6 @@ struct ContentView: View {
     @State private var searchText: String = ""
 
     var body: some View {
-<<<<<<< HEAD
-       
-        TabView(selection: $selectedTab){
-            List{
-                ForEach(viewModel.buildings){ building in
-                    HStack{
-                        Text("\(building.address)").onTapGesture {
-                            selectedBuilding = building
-                            selectedTab = "Routes"
-                            isGenPlan = false
-                        }
-                        
-                        
-                        
-                        
-                        Text("Общ. план").onTapGesture {
-                            print("plan")
-                            selectedBuilding = building
-                            selectedTab = "Routes"
-=======
         TabView(selection: $selectedTab) {
             VStack {
                 HStack {
@@ -66,12 +46,22 @@ struct ContentView: View {
 
                 List {
                     ForEach(viewModel.buildings) { building in
-                        Text("\(building.address) (\(building.abbreviation))").onTapGesture {
-                            print(building)
-                            selectedBuilding = building
-                            selectedTab = "Routes"
-                            print(building)
->>>>>>> 69b359e9a63f7ae2e0fc00a858b52a487eed2df5
+                       HStack{
+                   
+                           Text("\(building.address) (\(building.abbreviation))").onTapGesture {
+                                print(building)
+                                selectedBuilding = building
+                                selectedTab = "Routes"
+                                print(building)
+                           }  
+                         
+                           Spacer()
+                         
+                           Text("Общ. план").onTapGesture {
+                                print("plan")
+                                selectedBuilding = building
+                                selectedTab = "Routes"
+                           }
                         }
                     }
                 }
@@ -83,14 +73,8 @@ struct ContentView: View {
             }
             .tag("Buildings")
 
-<<<<<<< HEAD
-
             MapView(building: selectedBuilding, isGenPlan: $isGenPlan)
-            .tabItem {
-=======
-            MapView(building: selectedBuilding)
                 .tabItem {
->>>>>>> 69b359e9a63f7ae2e0fc00a858b52a487eed2df5
                     Image(systemName: "map")
                     Text("Маршруты")
                 }
