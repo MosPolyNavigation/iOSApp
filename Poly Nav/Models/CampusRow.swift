@@ -15,33 +15,40 @@ struct CampusRow: View {
     @State private var isExpanded: Bool = false
 
     var body: some View {
-        VStack {
-            Text("\(campus.address)\(campus.address == "ул. Большая Семёновская, д. 38" ? "\n" : " ")(\(campus.abbreviation))")
-                .padding(.top, 5)
-
+        HStack{
+            Spacer()
             VStack {
-                if isExpanded {
-                    Divider()
-                    Text("Общий план")
-                        .padding(.vertical, 2)
-                        .onTapGesture {
-                            openGenPlan()
-                            isExpanded = false
-                        }
-                    ForEach(campus.buildings) { building in
+                Text("\(campus.address)\(campus.address == "ул. Большая Семёновская, д. 38" ? "\n" : " ")(\(campus.abbreviation))")
+                    .padding(.top, 5)
+
+                VStack {
+                    if isExpanded {
                         Divider()
-                        Text("\(building.id) здание")
+                        Text("Общий план")
+                            .padding(.vertical, 2)
                             .onTapGesture {
-                                openBuilding(building.id)
+                                openGenPlan()
                                 isExpanded = false
                             }
+                        ForEach(campus.buildings) { building in
+                            Divider()
+                            Text("\(building.id) здание")
+                                .onTapGesture {
+                                    openBuilding(building.id)
+                                    isExpanded = false
+                                }
+                        }
                     }
                 }
+                .frame(height: isExpanded ? nil : 0, alignment: .leading)
+                .clipped()
             }
-            .frame(height: isExpanded ? nil : 0, alignment: .leading)
-            .clipped()
+            Spacer()
         }
-        .frame(alignment: .leading)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
+        .background(.thinMaterial)
+        .cornerRadius(12)
         .onTapGesture {
             isExpanded.toggle()
         }

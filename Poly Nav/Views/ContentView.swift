@@ -46,21 +46,23 @@ struct ContentView: View {
                 .padding(.bottom, 25)
                 .padding()
 
-                List {
-                    ForEach(viewModel.campuses) { campus in
-                        CampusRow(campus: campus, openGenPlan: {
-                            selectedTab = "Routes"
-                            isGenPlan = true
-                        }, openBuilding: { id in
-                            selectedCampus = campus
-                            selectedBuilding = id
-                            isGenPlan = false
-                            selectedTab = "Routes"
+                ScrollView {
+                    VStack{
+                        ForEach(viewModel.campuses) { campus in
+                            CampusRow(campus: campus, openGenPlan: {
+                                selectedTab = "Routes"
+                                isGenPlan = true
+                            }, openBuilding: { id in
+                                selectedCampus = campus
+                                selectedBuilding = id
+                                isGenPlan = false
+                                selectedTab = "Routes"
 
-                        })
+                            })
+                        }
                     }
+                    .padding(.horizontal, 12)
                 }
-                .listStyle(.insetGrouped)
             }
             
             .tabItem {
