@@ -18,7 +18,7 @@ struct CampusRow: View {
         HStack{
             Spacer()
             VStack {
-                Text("\(campus.address)\(campus.address == "ул. Большая Семёновская, д. 38" ? "\n" : " ")(\(campus.abbreviation))")
+                Text("\(campus.address)\(campus.address == "ул. Большая Семёновская, д. 38" ? "\n               " : " ")(\(campus.abbreviation))")
                     .padding(.top, 5)
 
                 VStack {

@@ -10,12 +10,49 @@
                     "floors": [
                         {
                             "id": 1,
+                            "imgUrl": "k1-f1"
+                        },
+                        {
+                            "id": 2,
+                            "imgUrl": "k1-f1"
+                        },
+                        {
+                            "id": 3,
+                            "imgUrl": "k1-f3"
+                        },
+                        {
+                            "id": 4,
                             "imgUrl": "k1-f3"
                         }
                     ]
                 },
                 {
                     "id":2,
+                    "floors": [
+                        {
+                            "id": 1,
+                            "imgUrl": "k2-f1"
+                        },
+                        {
+                            "id": 2,
+                            "imgUrl": "k2-f1"
+                        },
+                        {
+                            "id": 3,
+                            "imgUrl": "k2-f1"
+                        },
+                        {
+                            "id": 4,
+                            "imgUrl": "k2-f1"
+                        },
+                        {
+                            "id": 5,
+                            "imgUrl": "k2-f1"
+                        }
+                    ]
+                },
+                {
+                    "id":3,
                     "floors": [
                         {
                             "id": 1,
@@ -27,15 +64,35 @@
                         },
                         {
                             "id": 3,
+                            "imgUrl": "k4-f2"
+                        },
+                        {
+                            "id": 4,
+                            "imgUrl": "k4-f2"
+                        },
+                        {
+                            "id": 5,
                             "imgUrl": "k4-f5"
                         },
                     ]
                 },
                 {
-                    "id":3,
+                    "id":4,
                     "floors": [
                         {
                             "id": 1,
+                            "imgUrl": "k5-f9"
+                        },
+                        {
+                            "id": 2,
+                            "imgUrl": "k5-f9"
+                        },
+                        {
+                            "id": 3,
+                            "imgUrl": "k5-f9"
+                        },
+                        {
+                            "id": 4,
                             "imgUrl": "k5-f9"
                         }
                     ]
