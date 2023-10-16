@@ -13,7 +13,12 @@ struct ResponseData: Decodable {
 
 class ViewModel: ObservableObject {
     @Published var campuses: [Campus] = []
-
+    
+    
+    @Published var selectedTab = "Buildings"
+    @Published var selectedCampus: Campus?
+    @Published var selectedBuilding: Building?
+    
     func loadBuildings() {
         if let url = Bundle.main.url(forResource: "corpus.json", withExtension: nil) {
             do {
@@ -21,9 +26,18 @@ class ViewModel: ObservableObject {
                 let decoder = JSONDecoder()
                 let jsonData = try decoder.decode(ResponseData.self, from: data)
                 campuses = jsonData.campuses
+                selectedCampus = campuses.first
+                selectedBuilding = campuses.first?.buildings.first
             } catch {
                 print("error: \(error)")
             }
         }
+    }
+    
+    
+    func selectBuilding(campus: Campus, building: Building){
+        selectedBuilding = building
+        selectedCampus = campus
+        selectedTab = "Routes"
     }
 }

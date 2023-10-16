@@ -21,48 +21,27 @@ struct BuildingButton: ButtonStyle {
 struct ContentView: View {
     @EnvironmentObject var viewModel: ViewModel
 
-    @State private var selectedBuilding: Int = 1
-    @State private var selectedCampus: Campus?
     @State private var isGenPlan: Bool = false
-    @State private var selectedTab = "Корпуса"
-
-    @State private var searchText: String = ""
 
     var body: some View {
-        TabView(selection: $selectedTab) {
+        TabView(selection: $viewModel.selectedTab) {
             VStack {
-                HStack {
-                    Image(systemName: "magnifyingglass")
-                    TextField("Search", text: $searchText)
-                        .textFieldStyle(.plain)
-                }
-                .padding(.horizontal, 10)
-                .frame(height: 48)
-                .background(Color.black)
-                .overlay(content: {
-                    RoundedRectangle(cornerRadius: 15)
-                        .stroke(.gray, lineWidth: 0.5)
-                })
-                .padding(.bottom, 25)
-                .padding()
-
-                ScrollView {
-                    VStack{
-                        ForEach(viewModel.campuses) { campus in
-                            CampusRow(campus: campus, openGenPlan: {
-                                selectedTab = "Routes"
-                                isGenPlan = true
-                            }, openBuilding: { id in
-                                selectedCampus = campus
-                                selectedBuilding = id
-                                isGenPlan = false
-                                selectedTab = "Routes"
-
-                            })
-                        }
-                    }
-                    .padding(.horizontal, 12)
-                }
+//                HStack {
+//                    Image(systemName: "magnifyingglass")
+//                    TextField("Search", text: $searchText)
+//                        .textFieldStyle(.plain)
+//                }
+//                .padding(.horizontal, 10)
+//                .frame(height: 48)
+//                .background(Color.black)
+//                .overlay(content: {
+//                    RoundedRectangle(cornerRadius: 15)
+//                        .stroke(.gray, lineWidth: 0.5)
+//                })
+//                .padding(.bottom, 25)
+//                .padding()
+                CampusesView()
+                
             }
             
             .tabItem {
@@ -71,7 +50,7 @@ struct ContentView: View {
             }
             .tag("Buildings")
 
-            MapView(selectedBuilding: $selectedBuilding, campus: selectedCampus, isGenPlan: $isGenPlan)
+            MapView( isGenPlan: $isGenPlan)
                 .tabItem {
                     Image(systemName: "map")
                     Text("Маршруты")
@@ -86,7 +65,6 @@ struct ContentView: View {
         }
         .onAppear {
             viewModel.loadBuildings()
-            selectedCampus = viewModel.campuses.first!
         }
     }
 }

@@ -19,8 +19,9 @@ struct FloorButton: ButtonStyle {
 }
 
 struct MapView: View {
-    @Binding var selectedBuilding: Int
-    @State var campus: Campus?
+    
+    @EnvironmentObject var vm: ViewModel
+
 
     @Binding var isGenPlan: Bool
 
@@ -32,20 +33,15 @@ struct MapView: View {
 
     var body: some View {
         VStack {
-            if let campus = campus {
-                if let building = campus.buildings.first(where: {$0.id == selectedBuilding}) {
+            if let campus = vm.selectedCampus {
+                if let building = vm.selectedBuilding {
                     ZStack {
                         HStack {
                             if isGenPlan {
                                 campus.genPlanSvg
                                     .aspectRatio(1.3, contentMode: .fit)
                             } else {
-                                if let floor = building.floors.first(where: { $0.id == currentFloorId }) {
-                                    floor.image
-
-                                } else {
-                                    Text("Error")
-                                }
+                                building.floors.first(where: {floor in floor.id == currentFloorId})?.image
                             }
                         }
                         VStack {
