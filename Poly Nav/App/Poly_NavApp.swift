@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct Poly_NavApp: App {
-    @StateObject var state = ViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(state)
         }
     }
 }

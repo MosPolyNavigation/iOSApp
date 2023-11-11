@@ -8,36 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		111E274D2A118D3C00BFE9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111E274C2A118D3C00BFE9BC /* Assets.xcassets */; };
-		113AF9F42A12A15A009A9D48 /* CampusRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113AF9F32A12A15A009A9D48 /* CampusRow.swift */; };
-		2752A0CC2ADC6A2600A863C8 /* CampusesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752A0CB2ADC6A2600A863C8 /* CampusesView.swift */; };
-		2752A0CE2ADC6C8800A863C8 /* BuildingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2752A0CD2ADC6C8800A863C8 /* BuildingsView.swift */; };
 		27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */; };
 		27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */; };
-		27B46A7129EC3B5E00EDC6A0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */; };
-		27B46A7829ECC08F00EDC6A0 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7729ECC08F00EDC6A0 /* MapView.swift */; };
-		27B46A7A29ECCFD300EDC6A0 /* Floor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7929ECCFD300EDC6A0 /* Floor.swift */; };
-		27B46A7C29ECD08300EDC6A0 /* corpus.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B46A7B29ECD08300EDC6A0 /* corpus.json */; };
-		27B46A7E29ECD3E000EDC6A0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */; };
 		27B46A8329ECE68800EDC6A0 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8229ECE68800EDC6A0 /* Macaw */; };
 		27B46A8629ECE8E400EDC6A0 /* SVGView in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8529ECE8E400EDC6A0 /* SVGView */; };
-		27CF82562A0E50210099C302 /* buildings in Resources */ = {isa = PBXBuildFile; fileRef = 27CF82552A0E50210099C302 /* buildings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		111E274C2A118D3C00BFE9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		113AF9F32A12A15A009A9D48 /* CampusRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusRow.swift; sourceTree = "<group>"; };
-		2752A0CB2ADC6A2600A863C8 /* CampusesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CampusesView.swift; sourceTree = "<group>"; };
-		2752A0CD2ADC6C8800A863C8 /* BuildingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildingsView.swift; sourceTree = "<group>"; };
 		27B46A6629EC3B5D00EDC6A0 /* Poly Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poly Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poly_NavApp.swift; sourceTree = "<group>"; };
 		27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		27B46A7729ECC08F00EDC6A0 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
-		27B46A7929ECCFD300EDC6A0 /* Floor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Floor.swift; path = "Poly Nav/Models/Floor.swift"; sourceTree = SOURCE_ROOT; };
-		27B46A7B29ECD08300EDC6A0 /* corpus.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = corpus.json; sourceTree = "<group>"; };
-		27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
-		27C0DA562A12B6530060F4DC /* Poly-Nav-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Poly-Nav-Info.plist"; sourceTree = SOURCE_ROOT; };
-		27CF82552A0E50210099C302 /* buildings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = buildings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +38,6 @@
 			isa = PBXGroup;
 			children = (
 				27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */,
-				27B46A7729ECC08F00EDC6A0 /* MapView.swift */,
-				2752A0CB2ADC6A2600A863C8 /* CampusesView.swift */,
-				2752A0CD2ADC6C8800A863C8 /* BuildingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -68,8 +46,6 @@
 			isa = PBXGroup;
 			children = (
 				111E274C2A118D3C00BFE9BC /* Assets.xcassets */,
-				27B46A6F29EC3B5E00EDC6A0 /* Preview Content */,
-				27CF82552A0E50210099C302 /* buildings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -85,9 +61,6 @@
 		113AF9F22A1290D9009A9D48 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				27B46A7929ECCFD300EDC6A0 /* Floor.swift */,
-				27B46A7D29ECD3E000EDC6A0 /* MainViewModel.swift */,
-				113AF9F32A12A15A009A9D48 /* CampusRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,22 +84,12 @@
 		27B46A6829EC3B5D00EDC6A0 /* Poly Nav */ = {
 			isa = PBXGroup;
 			children = (
-				27C0DA562A12B6530060F4DC /* Poly-Nav-Info.plist */,
-				27B46A7B29ECD08300EDC6A0 /* corpus.json */,
 				113AF9F02A12900E009A9D48 /* Resources */,
 				113AF9EF2A128FD1009A9D48 /* Views */,
 				113AF9F12A1290C6009A9D48 /* App */,
 				113AF9F22A1290D9009A9D48 /* Models */,
 			);
 			path = "Poly Nav";
-			sourceTree = "<group>";
-		};
-		27B46A6F29EC3B5E00EDC6A0 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				27B46A7029EC3B5E00EDC6A0 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,9 +158,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B46A7129EC3B5E00EDC6A0 /* Preview Assets.xcassets in Resources */,
-				27B46A7C29ECD08300EDC6A0 /* corpus.json in Resources */,
-				27CF82562A0E50210099C302 /* buildings in Resources */,
 				111E274D2A118D3C00BFE9BC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -209,13 +169,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B46A7E29ECD3E000EDC6A0 /* MainViewModel.swift in Sources */,
-				113AF9F42A12A15A009A9D48 /* CampusRow.swift in Sources */,
-				2752A0CE2ADC6C8800A863C8 /* BuildingsView.swift in Sources */,
-				2752A0CC2ADC6A2600A863C8 /* CampusesView.swift in Sources */,
-				27B46A7A29ECCFD300EDC6A0 /* Floor.swift in Sources */,
 				27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */,
-				27B46A7829ECC08F00EDC6A0 /* MapView.swift in Sources */,
 				27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +211,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_ASSET_PATHS = "\"Poly\\ Nav/Resources/\"";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -317,6 +272,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_ASSET_PATHS = "\"Poly\\ Nav/Resources/\"";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -344,7 +300,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Poly\\ Nav/Resources Poly\\ Nav/Resources/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"Poly\\ Nav/Resources/\"";
 				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -374,7 +330,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "Poly\\ Nav/Resources Poly\\ Nav/Resources/Preview\\ Content";
+				DEVELOPMENT_ASSET_PATHS = "\"Poly\\ Nav/Resources/\"";
 				DEVELOPMENT_TEAM = Z7DXS499R9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
