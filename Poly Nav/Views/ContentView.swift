@@ -26,20 +26,6 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $viewModel.selectedTab) {
             VStack {
-//                HStack {
-//                    Image(systemName: "magnifyingglass")
-//                    TextField("Search", text: $searchText)
-//                        .textFieldStyle(.plain)
-//                }
-//                .padding(.horizontal, 10)
-//                .frame(height: 48)
-//                .background(Color.black)
-//                .overlay(content: {
-//                    RoundedRectangle(cornerRadius: 15)
-//                        .stroke(.gray, lineWidth: 0.5)
-//                })
-//                .padding(.bottom, 25)
-//                .padding()
                 CampusesView()
                 
             }

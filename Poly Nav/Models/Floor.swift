@@ -12,12 +12,12 @@ import SwiftUI
 struct Floor: Identifiable, Decodable {
     var imgUrl: String
     var id: Int
-    var image: SVGView {
+    var image: URL? {
         if let url = Bundle.main.url(forResource: imgUrl, withExtension: "svg", subdirectory: "buildings/avt") {
-            return SVGView(contentsOf: url)
+            return url
         }
+        return nil
         
-        return SVGView(string: "")
     }
 }
 

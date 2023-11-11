@@ -12,8 +12,8 @@ struct FloorButton: ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
         configuration.label
             .frame(width: 40, height: 40, alignment: .center)
-            .background(.ultraThickMaterial)
-            .foregroundColor(.white)
+            .background(.ultraThinMaterial)
+            .foregroundColor(.secondary)
             .cornerRadius(6)
     }
 }
@@ -21,17 +21,44 @@ struct FloorButton: ButtonStyle {
 struct MapView: View {
     
     @EnvironmentObject var vm: ViewModel
-
-
+    
+    
     @Binding var isGenPlan: Bool
-
+    
     @State private var currentFloorId: Int = 1
     @State private var searchText: String = ""
-
+    
     @GestureState private var scale: CGFloat = 1.0
-    @State private var currentScale: CGFloat = 1.0
-
+    
+    @State private var totalZoom: CGFloat = 1.0
+    @State private var currentZoom: CGFloat = 0.0
+    var magnification: some Gesture {
+        if #available(iOS 17.0, *){
+            return  MagnifyGesture()
+            
+                .onChanged { value in
+                    currentZoom = value.magnification - 1
+                }
+                .onEnded { value in
+                    totalZoom += currentZoom
+                    currentZoom = 0
+                }
+        
+        }else{
+            return MagnificationGesture()
+                .updating($scale) { currentState, pastState, transaction in
+                    pastState = currentState
+                }
+            
+        }
+    }
+        
+    var currentScale: CGFloat {
+        if #available(iOS 17.0, *){ return (currentZoom + totalZoom) }else { return scale}
+    }
+    
     var body: some View {
+        
         VStack {
             if let campus = vm.selectedCampus {
                 if let building = vm.selectedBuilding {
@@ -41,7 +68,15 @@ struct MapView: View {
                                 campus.genPlanSvg
                                     .aspectRatio(1.3, contentMode: .fit)
                             } else {
-                                building.floors.first(where: {floor in floor.id == currentFloorId})?.image
+                                if  let url = building.floors.first(where: {floor in floor.id == currentFloorId})?.image{
+                                    
+                                    SVGView(contentsOf: url)
+                                        .scaleEffect(currentScale)
+                                }else{
+                                    Text("Plan isn't exist")
+                                }
+                                
+                                
                             }
                         }
                         VStack {
@@ -52,10 +87,9 @@ struct MapView: View {
                             }
                             .padding(.horizontal, 10)
                             .frame(height: 48)
-                            .background(Color.black)
                             .overlay(content: {
-                                RoundedRectangle(cornerRadius: 15)
-                                    .stroke(.gray, lineWidth: 0.5)
+                                RoundedRectangle(cornerRadius: 10)
+                                    .stroke(.secondary, lineWidth: 1.5)
                             })
                             .padding(.bottom, 25)
 
@@ -85,7 +119,10 @@ struct MapView: View {
                             Spacer()
                         }.padding()
                     }
-                }
+                    .gesture(
+                            magnification
+                        )
+                    }
                 
             } else {
                 Text("Loading")
