@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		111E274D2A118D3C00BFE9BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111E274C2A118D3C00BFE9BC /* Assets.xcassets */; };
+		2724B8182B9E1BD800F42FCC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724B8172B9E1BD800F42FCC /* MainView.swift */; };
+		2724B81A2B9E1C5100F42FCC /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724B8192B9E1C5100F42FCC /* WebView.swift */; };
 		27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */; };
 		27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */; };
 		27B46A8329ECE68800EDC6A0 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8229ECE68800EDC6A0 /* Macaw */; };
@@ -16,6 +18,8 @@
 
 /* Begin PBXFileReference section */
 		111E274C2A118D3C00BFE9BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2724B8172B9E1BD800F42FCC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		2724B8192B9E1C5100F42FCC /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		27B46A6629EC3B5D00EDC6A0 /* Poly Nav.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poly Nav.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Poly_NavApp.swift; sourceTree = "<group>"; };
 		27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 			isa = PBXGroup;
 			children = (
 				27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */,
+				2724B8172B9E1BD800F42FCC /* MainView.swift */,
+				2724B8192B9E1C5100F42FCC /* WebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -170,6 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */,
+				2724B81A2B9E1C5100F42FCC /* WebView.swift in Sources */,
+				2724B8182B9E1BD800F42FCC /* MainView.swift in Sources */,
 				27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -309,7 +317,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +347,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -13,6 +13,6 @@ struct ContentView: View {
     
 
     var body: some View {
-        Text("Hello World!!!")
+        MainView(url: URL(string: "https://mospolynavigation.github.io/web/"))
     }
 }
