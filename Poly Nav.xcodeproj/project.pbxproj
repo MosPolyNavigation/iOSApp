@@ -12,8 +12,6 @@
 		2724B81A2B9E1C5100F42FCC /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2724B8192B9E1C5100F42FCC /* WebView.swift */; };
 		27B46A6A29EC3B5D00EDC6A0 /* Poly_NavApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6929EC3B5D00EDC6A0 /* Poly_NavApp.swift */; };
 		27B46A6C29EC3B5D00EDC6A0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B46A6B29EC3B5D00EDC6A0 /* ContentView.swift */; };
-		27B46A8329ECE68800EDC6A0 /* Macaw in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8229ECE68800EDC6A0 /* Macaw */; };
-		27B46A8629ECE8E400EDC6A0 /* SVGView in Frameworks */ = {isa = PBXBuildFile; productRef = 27B46A8529ECE8E400EDC6A0 /* SVGView */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +28,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B46A8629ECE8E400EDC6A0 /* SVGView in Frameworks */,
-				27B46A8329ECE68800EDC6A0 /* Macaw in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,13 +60,6 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		113AF9F22A1290D9009A9D48 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		27B46A5D29EC3B5D00EDC6A0 = {
 			isa = PBXGroup;
 			children = (
@@ -93,7 +82,6 @@
 				113AF9F02A12900E009A9D48 /* Resources */,
 				113AF9EF2A128FD1009A9D48 /* Views */,
 				113AF9F12A1290C6009A9D48 /* App */,
-				113AF9F22A1290D9009A9D48 /* Models */,
 			);
 			path = "Poly Nav";
 			sourceTree = "<group>";
@@ -115,8 +103,6 @@
 			);
 			name = "Poly Nav";
 			packageProductDependencies = (
-				27B46A8229ECE68800EDC6A0 /* Macaw */,
-				27B46A8529ECE8E400EDC6A0 /* SVGView */,
 			);
 			productName = "Poly Nav";
 			productReference = 27B46A6629EC3B5D00EDC6A0 /* Poly Nav.app */;
@@ -147,8 +133,6 @@
 			);
 			mainGroup = 27B46A5D29EC3B5D00EDC6A0;
 			packageReferences = (
-				27B46A8129ECE68800EDC6A0 /* XCRemoteSwiftPackageReference "Macaw" */,
-				27B46A8429ECE8E400EDC6A0 /* XCRemoteSwiftPackageReference "SVGView" */,
 			);
 			productRefGroup = 27B46A6729EC3B5D00EDC6A0 /* Products */;
 			projectDirPath = "";
@@ -383,38 +367,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		27B46A8129ECE68800EDC6A0 /* XCRemoteSwiftPackageReference "Macaw" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/Macaw";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.9;
-			};
-		};
-		27B46A8429ECE8E400EDC6A0 /* XCRemoteSwiftPackageReference "SVGView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/exyte/SVGView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		27B46A8229ECE68800EDC6A0 /* Macaw */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 27B46A8129ECE68800EDC6A0 /* XCRemoteSwiftPackageReference "Macaw" */;
-			productName = Macaw;
-		};
-		27B46A8529ECE8E400EDC6A0 /* SVGView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 27B46A8429ECE8E400EDC6A0 /* XCRemoteSwiftPackageReference "SVGView" */;
-			productName = SVGView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 27B46A5E29EC3B5D00EDC6A0 /* Project object */;
 }
