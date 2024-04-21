@@ -24,17 +24,12 @@ struct MainView: View {
                         Image("SplashIcon")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 200, height: 200)
+                            .cornerRadius(20)
+                            .frame(width: 200, height: 200,alignment: .bottom)
                         
                     }
                 }
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
-
-                    }
-                }
-                
             }
-        }
+        }.ignoresSafeArea()
     }
 }
