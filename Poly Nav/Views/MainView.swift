@@ -15,12 +15,21 @@ struct MainView: View {
     var body: some View {
         ZStack{
             if let url = url{
-                WebView(url: url, isLoading: $isLoading)
-                    .edgesIgnoringSafeArea(.all)
-                if isLoading{
-                    ProgressView()
+                ZStack {
+                    WebView(url: url, isLoading: $isLoading)
+                        .edgesIgnoringSafeArea(.all)
+                    if self.isLoading {
+                        Rectangle()
+                            .background(Color.black)
+                        Image("SplashIcon")
+                            .resizable()
+                            .scaledToFit()
+                            .cornerRadius(20)
+                            .frame(width: 200, height: 200,alignment: .bottom)
+                        
+                    }
                 }
             }
-        }
+        }.ignoresSafeArea()
     }
 }
