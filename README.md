@@ -1,6 +1,7 @@
 # Mospolytech Buildings Nav App
 
-![App Icon](/Logo.png)
+<img src="Logo.png" alt="App Icon" width="100">
+
 
 ## Overview
 
