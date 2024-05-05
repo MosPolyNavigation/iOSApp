@@ -1,4 +1,4 @@
-# Mospolytech Buildings Nav App
+# Poly Nav App
 
 <img src="Logo.png" alt="App Icon" width="100">
 
